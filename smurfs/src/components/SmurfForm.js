@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 
 import { addSmurf } from "../actions/index.js";
 
+// built smurfForm component to add action to post new smurf to server
+
 class SmurfForm extends Component {
   constructor() {
     super();

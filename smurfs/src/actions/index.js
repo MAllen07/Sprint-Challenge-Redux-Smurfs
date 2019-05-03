@@ -56,3 +56,6 @@ export const getSmurfs = () => {
       });
   };
 };
+
+// stretch problem
+// U updateSmurf action creator
