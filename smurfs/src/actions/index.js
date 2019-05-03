@@ -16,11 +16,27 @@ export const ERROR = "ERROR";
    and 2 more for the stretch problem.
    Be sure to include action types for each type of action creator. Also, be sure to mind
      the "pending" states like, fetching, creating, updating and deleting.
-   C - addSmurf
+   C - addSmurf *
    R - getSmurfs *
    U - updateSmurf 
    D - deleteSmurf 
 */
+
+// C addSmurf action creator
+
+export const addSmurf = addedSmurf => {
+  return dispatch => {
+    dispatch({ type: FETCHING });
+    axios
+      .post(`http://localhost:3333/smurfs`, addedSmurf)
+      .then(response => {
+        dispatch({ type: GET_SMURFS, smurfs: response.data });
+      })
+      .catch(err => {
+        dispatch({ type: ERROR, error: `Oh no! We couldn't add the Smurf!` });
+      });
+  };
+};
 
 // R getSmurfs action creator
 
