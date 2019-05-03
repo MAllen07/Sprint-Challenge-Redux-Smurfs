@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SmurfList from ".SmurfList.js";
+import SmurfList from "./SmurfList";
 import SmurfForm from "./SmurfForm.js";
 /*
  to wire this component up you're going to need a few things.
